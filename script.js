@@ -125,30 +125,27 @@ const storyData = {
     "enterCave": {
         "text": "你進入洞穴，發現洞穴深處藏有大量的寶藏和一個神秘的護符。護符擁有強大的魔法力量，可以幫助你在接下來的冒險中克服各種困難。",
         "choices": {
-            "restart": "重新開始",
-            "leaveTreasure": "離開洞穴"
+            "restart": "重新開始"
         },
         "achievement": "洞穴探險者"
     },
     "ignoreCave": {
         "text": "你決定不進入洞穴，繼續沿著湖邊的小路前行。你穿過湖邊的小路，來到了一片新的區域，展開新的冒險。",
         "choices": {
-            "exploreNewArea": "探索新區域",
-            "rest": "休息"
+            "restart": "休息"
         }
     },
     "exploreTunnel": {
         "text": "你進入地道，發現裡面有許多危險的機關和陷阱，但同時也有無數的寶藏。你必須小心翼翼地探索。",
         "choices": {
-            "disarmTraps": "解除陷阱",
+            "restart": "重新開始",
             "collectTreasure": "收集寶藏"
         }
     },
     "leaveTunnel": {
         "text": "你決定離開地道，回到廢墟的地面上，繼續探索其他地方。",
         "choices": {
-            "exploreRuinsAgain": "再次探索廢墟",
-            "leaveRuinsCompletely": "完全離開廢墟"
+            "restart": "重新開始"
         }
     },
     "collectHerbs": {
@@ -161,8 +158,7 @@ const storyData = {
     "leaveHerbs": {
         "text": "你決定離開藥草園，繼續你的冒險。",
         "choices": {
-            "restart": "重新開始",
-            "exploreNewArea": "探索新區域"
+            "restart": "重新開始"
         }
     },
     "fightBeast": {
@@ -176,15 +172,13 @@ const storyData = {
     "runAway": {
         "text": "你決定逃跑，避開這隻危險的怪物。你飛快地穿過森林，找到了一條安全的道路。",
         "choices": {
-            "restart": "重新開始",
-            "restAtSafePlace": "在安全的地方休息"
+            "restart": "重新開始"
         }
     },
     "collectTreasure": {
         "text": "你收集了寶藏，這些寶藏將在接下來的冒險中對你大有幫助。",
         "choices": {
-            "restart": "重新開始",
-            "restAndExamineTreasure": "休息並檢查寶藏"
+            "restart": "重新開始"
         }
     },
     "leaveImmediately": {
@@ -247,8 +241,7 @@ const storyData = {
     "thankElf": {
         "text": "你感謝精靈的幫助，並決定繼續你的冒險。精靈送給你一顆神奇的寶石，這顆寶石可以在危急時刻拯救你的生命。",
         "choices": {
-            "restart": "重新開始",
-            "exploreNewArea": "探索新區域"
+            "restart": "重新開始"
         }
     },
     "explorePath": {
@@ -282,16 +275,14 @@ const storyData = {
     "fightWolves": {
         "text": "你決定與野狼戰鬥，經過一番激烈的拼搏，你成功地擊退了野狼，保護了自己。",
         "choices": {
-            "restart": "重新開始",
-            "exploreNewArea": "探索新區域"
+            "restart": "重新開始"
         },
         "achievement": "勇敢的戰士"
     },
     "runFromWolves": {
         "text": "你決定逃離野狼，迅速地躲進了一個隱蔽的地方。野狼無法追蹤到你，你安全了。",
         "choices": {
-            "restart": "重新開始",
-            "restAtSafePlace": "在安全的地方休息"
+            "restart": "重新開始"
         }
     },
     "takeAmulet": {
@@ -320,8 +311,7 @@ const storyData = {
     "leaveGarden": {
         "text": "你決定離開花園，繼續你的冒險。你穿過花園，來到了一片新的區域，展開新的探險。",
         "choices": {
-            "exploreNewArea": "探索新區域",
-            "rest": "休息"
+            "restart": "休息"
         }
     },
     "learnSpell": {
@@ -403,8 +393,8 @@ function displayChoices(choices) {
             appendMessage(choices[choice], false, () => {
                 if (choice === 'restart') {
                     clearMessages();
-                    achievements = []; // 重置成就
-                    diamonds = 0; // 重置鑽石數量
+                    achievements = [];
+                    diamonds = 0;
                     updateDiamondsDisplay();
                     displayCharacterSelection();
                 } else {
@@ -421,7 +411,7 @@ function displayStory(node, character = selectedCharacter) {
     appendMessage(story.text, true, () => {
         if (story.achievement && !achievements.includes(story.achievement)) {
             achievements.push(story.achievement);
-            diamonds += 10; // 每次解鎖成就時增加10鑽石
+            diamonds += 10;
             showAchievement(story.achievement, () => {
                 if (story.choices) {
                     displayChoices(story.choices);
@@ -436,7 +426,7 @@ function displayStory(node, character = selectedCharacter) {
                 displayAchievements();
             }
         }
-        updateDiamondsDisplay(); // 更新顯示的鑽石數量
+        updateDiamondsDisplay();
     });
 }
 
@@ -499,8 +489,8 @@ function displayAchievements() {
     button.innerText = '重新開始';
     button.onclick = () => {
         clearMessages();
-        achievements = []; // 重置成就
-        diamonds = 0; // 重置鑽石數量
+        achievements = [];
+        diamonds = 0;
         updateDiamondsDisplay();
         displayCharacterSelection();
     };
