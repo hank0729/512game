@@ -194,13 +194,158 @@ const storyData = {
             "restAndRecover": "休息並恢復"
         }
     },
+    "exploreForest": {
+        "text": "你決定探索這片神秘的森林。森林中充滿了各種奇異的生物和神秘的現象。你遇到了一個友好的精靈，精靈告訴你關於這片森林的一些秘密。",
+        "choices": {
+            "learnSecrets": "了解秘密",
+            "ignoreElf": "忽略精靈"
+        }
+    },
+    "leaveForest": {
+        "text": "你決定離開這片森林，繼續你的冒險。你穿過茂密的樹林，來到了一片遼闊的平原。",
+        "choices": {
+            "explorePlains": "探索平原",
+            "restOnPlains": "在平原上休息"
+        }
+    },
+    "learnSecrets": {
+        "text": "精靈告訴你，這片森林中藏有一個古老的祭壇，祭壇上有一個強大的護符，可以賜予持有者神秘的力量。",
+        "choices": {
+            "findAltar": "尋找祭壇",
+            "thankElf": "感謝精靈並離開"
+        }
+    },
+    "ignoreElf": {
+        "text": "你決定忽略精靈，繼續你的冒險。你在森林中發現了一條隱蔽的小路，通向一片未知的領域。",
+        "choices": {
+            "explorePath": "探索小路",
+            "leavePath": "離開小路"
+        }
+    },
+    "explorePlains": {
+        "text": "你在平原上探索，發現了一個古老的石碑。石碑上刻有一些奇異的符文，似乎隱藏著某種秘密。",
+        "choices": {
+            "readRunes": "解讀符文",
+            "ignoreRunes": "忽略符文"
+        }
+    },
+    "restOnPlains": {
+        "text": "你在平原上休息，享受著平靜的時光。突然，一群野狼向你襲來，你必須立即做出反應。",
+        "choices": {
+            "fightWolves": "與野狼戰鬥",
+            "runFromWolves": "逃離野狼"
+        }
+    },
+    "findAltar": {
+        "text": "你根據精靈的指引，找到了一個隱藏在森林深處的古老祭壇。祭壇上放著一個閃閃發光的護符，似乎擁有強大的力量。",
+        "choices": {
+            "takeAmulet": "拿起護符",
+            "leaveAmulet": "離開護符"
+        },
+        "achievement": "森林的守護者"
+    },
+    "thankElf": {
+        "text": "你感謝精靈的幫助，並決定繼續你的冒險。精靈送給你一顆神奇的寶石，這顆寶石可以在危急時刻拯救你的生命。",
+        "choices": {
+            "restart": "重新開始",
+            "exploreNewArea": "探索新區域"
+        }
+    },
+    "explorePath": {
+        "text": "你沿著小路前行，發現了一座隱秘的花園。花園中種滿了各種奇花異草，空氣中彌漫著濃郁的香氣。",
+        "choices": {
+            "exploreGarden": "探索花園",
+            "leaveGarden": "離開花園"
+        }
+    },
+    "leavePath": {
+        "text": "你決定離開這條小路，回到主要道路上。你繼續沿著森林的小徑前行，發現了一個古老的遺跡。",
+        "choices": {
+            "exploreRuins": "探索遺跡",
+            "leaveRuins": "離開遺跡"
+        }
+    },
+    "readRunes": {
+        "text": "你仔細解讀石碑上的符文，發現它們記載了一個古老的咒語。這個咒語可以在危急時刻召喚一個強大的守護靈來保護你。",
+        "choices": {
+            "learnSpell": "學習咒語",
+            "ignoreSpell": "忽略咒語"
+        }
+    },
+    "ignoreRunes": {
+        "text": "你決定忽略這些符文，繼續你的冒險。你在平原上發現了一個隱蔽的洞穴，洞穴中似乎隱藏著某種寶藏。",
+        "choices": {
+            "enterCave": "進入洞穴",
+            "ignoreCave": "忽略洞穴"
+        }
+    },
+    "fightWolves": {
+        "text": "你決定與野狼戰鬥，經過一番激烈的拼搏，你成功地擊退了野狼，保護了自己。",
+        "choices": {
+            "restart": "重新開始",
+            "exploreNewArea": "探索新區域"
+        },
+        "achievement": "勇敢的戰士"
+    },
+    "runFromWolves": {
+        "text": "你決定逃離野狼，迅速地躲進了一個隱蔽的地方。野狼無法追蹤到你，你安全了。",
+        "choices": {
+            "restart": "重新開始",
+            "restAtSafePlace": "在安全的地方休息"
+        }
+    },
+    "takeAmulet": {
+        "text": "你小心翼翼地拿起護符，感受到它散發出的強大力量。這個護符將在接下來的冒險中給予你無窮的幫助。",
+        "choices": {
+            "restart": "重新開始",
+            "exploreNewArea": "探索新區域"
+        },
+        "achievement": "護符持有者"
+    },
+    "leaveAmulet": {
+        "text": "你決定不拿走護符，尊重這個古老的祭壇。你繼續探索森林，發現了一個隱蔽的山洞。",
+        "choices": {
+            "enterCave": "進入山洞",
+            "ignoreCave": "忽略山洞"
+        }
+    },
+    "exploreGarden": {
+        "text": "你在花園中探索，發現了一株神奇的藥草。這種藥草具有強大的治癒能力，可以迅速治愈任何傷口。",
+        "choices": {
+            "takeHerb": "採摘藥草",
+            "leaveHerb": "離開藥草"
+        },
+        "achievement": "藥草採集者"
+    },
+    "leaveGarden": {
+        "text": "你決定離開花園，繼續你的冒險。你穿過花園，來到了一片新的區域，展開新的探險。",
+        "choices": {
+            "exploreNewArea": "探索新區域",
+            "rest": "休息"
+        }
+    },
+    "learnSpell": {
+        "text": "你學習了這個古老的咒語，感受到一股強大的力量流入你的體內。這個咒語將在你面對危險時保護你。",
+        "choices": {
+            "restart": "重新開始",
+            "exploreNewArea": "探索新區域"
+        },
+        "achievement": "咒語大師"
+    },
+    "ignoreSpell": {
+        "text": "你決定忽略這個咒語，繼續你的冒險。你在平原上發現了一個古老的遺跡，遺跡中似乎藏有一些秘密。",
+        "choices": {
+            "exploreRuins": "探索遺跡",
+            "leaveRuins": "離開遺跡"
+        }
+    },
     "achievements": {
         "text": "你完成了這段冒險旅程，這是你獲得的成就：",
         "choices": {
             "restart": "重新開始"
         }
     }
-};
+}
 let selectedCharacter = null;
 let achievements = [];
 let diamonds = 0;
@@ -258,6 +403,9 @@ function displayChoices(choices) {
             appendMessage(choices[choice], false, () => {
                 if (choice === 'restart') {
                     clearMessages();
+                    achievements = []; // 重置成就
+                    diamonds = 0; // 重置鑽石數量
+                    updateDiamondsDisplay();
                     displayCharacterSelection();
                 } else {
                     displayStory(choice);
@@ -316,6 +464,9 @@ function showAchievement(achievement, callback) {
     restartButton.onclick = () => {
         achievementContainer.remove();
         clearMessages();
+        achievements = []; // 重置成就
+        diamonds = 0; // 重置鑽石數量
+        updateDiamondsDisplay();
         displayCharacterSelection();
     };
 
@@ -348,6 +499,9 @@ function displayAchievements() {
     button.innerText = '重新開始';
     button.onclick = () => {
         clearMessages();
+        achievements = []; // 重置成就
+        diamonds = 0; // 重置鑽石數量
+        updateDiamondsDisplay();
         displayCharacterSelection();
     };
     choicesContainer.appendChild(button);
