@@ -23,6 +23,20 @@ body {
     justify-content: flex-end;
 }
 
+#diamonds-display {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.diamond-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
 #messages {
     flex: 1;
     overflow-y: auto;
