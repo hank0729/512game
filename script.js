@@ -406,8 +406,7 @@ function displayChoices(choices) {
 function displayStory(node, character = selectedCharacter) {
     const story = node === 'start' ? storyData.start[character] : storyData[node];
     appendMessage(story.text, true, () => {
-        if (story.achievement && !achievements.includes(story.achievement)) {
-            achievements.push(story.achievement);
+        if (story.achievement) {
             diamonds += 10;
             showAchievement(story.achievement, () => {
                 if (story.choices) {
@@ -423,7 +422,7 @@ function displayStory(node, character = selectedCharacter) {
                 displayAchievements();
             }
         }
-        updateDiamondsDisplay();
+        updateDiamondsDisplay(); // 更新顯示的鑽石數量
     });
 }
 
@@ -562,9 +561,9 @@ function exchangeItem(cost, item) {
 
 
 function buy1() {
-    exchangeItem(500, '雄工LED');
+    exchangeItem(5000, '雄工LED');
 }
 
 function buy2() {
-    exchangeItem(9999, '雄工課程體驗資格');
+    exchangeItem(99999, '雄工課程體驗資格');
 }
