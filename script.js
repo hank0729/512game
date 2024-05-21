@@ -561,7 +561,7 @@ function exchangeItem(cost, item) {
 
 
 function buy1() {
-    exchangeItem(5000, '雄工LED');
+    exchangeItem(2000, '雄工LED');
 }
 
 function buy2() {
@@ -569,5 +569,5 @@ function buy2() {
 }
 
 function buy3() {
-    exchangeItem(500, '雄工紀念筆');
+    exchangeItem(200, '雄工紀念筆');
 }
