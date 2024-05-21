@@ -567,3 +567,7 @@ function buy1() {
 function buy2() {
     exchangeItem(99999, '雄工課程體驗資格');
 }
+
+function buy3() {
+    exchangeItem(500, '雄工紀念筆');
+}
