@@ -495,7 +495,9 @@ function displayCharacterSelection() {
 
 function updateDiamondsDisplay() {
     const diamondsDisplay = document.getElementById('diamonds-display');
-    diamondsDisplay.innerHTML = `<img src="diamond.png" alt="鑽石圖案" class="diamond-icon"> 鑽石：${diamonds}`;
+    diamondsDisplay.innerHTML = `<button id="diamonds-display" class="diamond-button" onclick="showExchangeModal()">
+    <img src="diamond.png" alt="鑽石圖案" class="diamond-icon">
+</button> 鑽石：${diamonds}`;
 }
 
 function showAllAchievements() {
@@ -527,10 +529,42 @@ document.addEventListener('DOMContentLoaded', () => {
         <button id="achievement-button" class="choice-button" onclick="showAllAchievements()">查看成就</button>
     `;
     const diamondsDisplayHTML = `
-        <div id="diamonds-display"><img src="diamond.png" alt="鑽石圖案" class="diamond-icon"> 鑽石：0</div>
+        <div id="diamonds-display"><button id="diamonds-display" class="diamond-button" onclick="showExchangeModal()">
+        <img src="diamond.png" alt="鑽石圖案" class="diamond-icon">
+    </button> 鑽石：0</div>
     `;
     document.getElementById('chat-container').insertAdjacentHTML('afterend', achievementButtonHTML);
     document.getElementById('chat-container').insertAdjacentHTML('afterbegin', characterSelectionHTML);
     document.getElementById('chat-container').insertAdjacentHTML('beforebegin', diamondsDisplayHTML);
     document.getElementById('choices-container').style.display = 'none';
 });
+
+function showExchangeModal() {
+    document.getElementById('exchange-modal').style.display = 'block';
+}
+
+function closeExchangeModal() {
+    document.getElementById('exchange-modal').style.display = 'none';
+}
+
+document.getElementById('diamonds-display').addEventListener('click', showExchangeModal);
+document.querySelector('.close-button').addEventListener('click', closeExchangeModal);
+
+function exchangeItem(cost, item) {
+    if (diamonds >= cost) {
+        diamonds -= cost;
+        alert(`成功兌換${item}!`);
+        updateDiamondsDisplay();
+    } else {
+        alert('鑽石不足，無法兌換！');
+    }
+}
+
+
+function buy1() {
+    exchangeItem(500, '雄工LED');
+}
+
+function buy2() {
+    exchangeItem(9999, '雄工課程體驗資格');
+}
