@@ -569,5 +569,5 @@ function buy2() {
 }
 
 function buy3() {
-    exchangeItem(200, '雄工紀念筆');
+    exchangeItem(500, '雄工紀念筆');
 }
