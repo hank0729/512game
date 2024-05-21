@@ -289,7 +289,6 @@ const storyData = {
         "text": "你小心翼翼地拿起護符，感受到它散發出的強大力量。這個護符將在接下來的冒險中給予你無窮的幫助。",
         "choices": {
             "restart": "重新開始",
-            "exploreNewArea": "探索新區域"
         },
         "achievement": "護符持有者"
     },
@@ -318,7 +317,6 @@ const storyData = {
         "text": "你學習了這個古老的咒語，感受到一股強大的力量流入你的體內。這個咒語將在你面對危險時保護你。",
         "choices": {
             "restart": "重新開始",
-            "exploreNewArea": "探索新區域"
         },
         "achievement": "咒語大師"
     },
