@@ -393,7 +393,6 @@ function displayChoices(choices) {
             appendMessage(choices[choice], false, () => {
                 if (choice === 'restart') {
                     clearMessages();
-                    achievements = [];
                     displayCharacterSelection();
                 } else {
                     displayStory(choice);
@@ -409,7 +408,7 @@ function displayStory(node, character = selectedCharacter) {
     appendMessage(story.text, true, () => {
         if (story.achievement && !achievements.includes(story.achievement)) {
             achievements.push(story.achievement);
-            diamonds += 10; // 每次解鎖成就時增加10鑽石
+            diamonds += 10;
             showAchievement(story.achievement, () => {
                 if (story.choices) {
                     displayChoices(story.choices);
@@ -424,7 +423,7 @@ function displayStory(node, character = selectedCharacter) {
                 displayAchievements();
             }
         }
-        updateDiamondsDisplay(); // 更新顯示的鑽石數量
+        updateDiamondsDisplay();
     });
 }
 
@@ -452,7 +451,6 @@ function showAchievement(achievement, callback) {
     restartButton.onclick = () => {
         achievementContainer.remove();
         clearMessages();
-        achievements = []; // 重置成就，但保留鑽石數量
         displayCharacterSelection();
     };
 
@@ -485,7 +483,6 @@ function displayAchievements() {
     button.innerText = '重新開始';
     button.onclick = () => {
         clearMessages();
-        achievements = []; // 重置成就，但保留鑽石數量
         displayCharacterSelection();
     };
     choicesContainer.appendChild(button);
